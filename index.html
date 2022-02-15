@@ -24,7 +24,7 @@ blah, blah, blah, blah
 -->
 
    <head> 
-      <title>Cold or Allergies</title>  
+      <title>Do you have an ear infection?</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -33,27 +33,27 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0; <!--Keeps count of amount of responses-->
-        var cold_count = 0;
+        var positive_count = 0; <!--Keeps count of amount of responses-->
+        var negative_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1; <!--Got rid of pop up text box-->
+        function positveAdd(){
+            positive_count = positive_count + 1; <!--Got rid of pop up text box-->
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function negativeAdd(){
+            negative_count = negative_count + 1;
         }
 
 	function Results(){
 		
-	var allergy_percent = (allergy_count/6)*100;
-	var cold_percent = (cold_count/6)*100;
+	var positive_percent = (positive_count/6)*100;
+	var negative_percent = (negative_count/6)*100;
 	var resultText = document.getElementById("replaceWithResults"); <!--Lets me get results-->
 		
-	resultText.innerHTML = "Probability it is allergies =" + allergy_percent + "<br> Probabilty it is a cold =" + cold_percent;
-	} <!--Calculates final results determing percentages of being cold or allergy-->
+	resultText.innerHTML = "Probability it is Ear infection =" + positive_percent + "<br> Probabilty it is not Ear infection =" + negative_percent;
+	} <!--Calculates final results determing percentages of being an ear infection or not-->
 	
   </script>
 
@@ -83,11 +83,11 @@ blah, blah, blah, blah
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Do you have an ear infection?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have an ear infection, but think it could not be? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
